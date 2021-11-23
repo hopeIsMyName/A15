@@ -1,127 +1,136 @@
 /* the styles for the elements */
-html,body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    width: 600px;
-
-    margin: 0 auto;
-
-    border-style: solid;
-    border-size: 3px;
-    border-color: #931420;
-
-    /*background-color: #fffded;*/
-
+* {
+    margin: 0;
+    padding: 0;
 }
-
 html {
     background-color: white;
 }
-
-h2{
-    text-indent: 30px;
-    font-size: 170%;
-    color:#800000;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 99%;
+    max-width: 960px;
+    margin: 0 auto;
+    border: 3px solid #931420;
+    background-color: #fffded;
 }
 
-h3{
+section, aside, header {
+    margin-bottom: 1em;
+}
+a:focus, a:hover {
+    font-style: italic;
+}
+/* the styles for the header */
+header {
+    padding: 1.5em 0 2em 0;
+    border-bottom: 3px solid #931420;
+    background-image: -moz-linear-gradient(
+            30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+    background-image: -webkit-linear-gradient(
+            30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+    background-image: -o-linear-gradient(
+            30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+    background-image: linear-gradient(
+            30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+}
+header h2 {
+    font-size: 175%;
+    color: #800000;
+}
+header h3 {
     font-size: 130%;
     font-style: italic;
-    text-indent: 30px;
 }
-
-/* the styles for the header */
-div.header img {
+header img {
     float: left;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 1em;
+    padding: 0 30px;
 }
-
-div.header {
-    border-bottom: solid 3px #931420;
-    padding-top: 1.5em;
-    padding-bottom: 2em;
-
-    background-color: red; /* For browsers that do not support gradients */
-    background-image: linear-gradient(30deg, #f6bb73 30%, white);
+.shadow {
+    text-shadow: 2px 2px 2px #800000;
 }
-
-/* the styles for the section */
+/* the styles for the main content */
 main {
     clear: left;
-    padding-left: 30px;
-    padding-right: 30px;
-
 }
-p{
+/* the styles for the section */
+section {
+    width: 525px;
+    float: right;
+    padding: 0 20px 20px 20px;
+}
+section h1 {
+    font-size: 150%;
+    padding: .5em 0 .25em 0;
+    margin: 0;               /* If you remove this, the margins in normalize.css will be applied. */
+}
+section h2 {
+    color: #800000;
+    font-size: 130%;
+    padding: .5em 0 .25em 0;
+}
+section p {
     padding-bottom: .5em;
 }
-
-h1 main {
-    border-top: solid 3px #931420;
-    border-bottom: solid 3px #931420;
-
-
+section blockquote {
+    padding: 0 2em;
+    font-style: italic;
 }
-h1 {
-    font-size: 150%;
-    padding-top: .3em;
-    padding-bottom: .3em;
-
-
+section ul {
+    padding: 0 0 .25em 1.25em;
 }
-
-ul{
-    padding-bottom: .25em;
-    padding-left: 1.25em;
-}
-
-li{
+section li {
     padding-bottom: .35em;
 }
 
-h2 {
-    font-size: 130%;
-    color: #800000;
-    padding-top: .5em;
-    padding-bottom: .25em;
-
+/* the styles for the article */
+article {
+    padding: .5em 0;
+    border-top: 2px solid #800000;
+    border-bottom: 2px solid #800000;
 }
-
-h3 {
+article h2 {
+    padding-top: 0;
+}
+article h3 {
     font-size: 105%;
     padding-bottom: .25em;
 }
-
-link:hover {
-    font-style: italic;
+article img {
+    float: right;
+    margin: .5em 0 1em 1em;
+    border: 1px solid black;
 }
 
-.footer {
-    text-align: center;
-    background-color: #931420;
-    color: white;
+/* the styles for the aside */
+aside {
+    width: 215px;
+    float: right;
+    padding: 0 0 20px 20px;
 }
-
-
-.shadow {
-    text-shadow: 2px 2px #800000;
+aside h2 {
     color: #800000;
+    font-size: 130%;
+    padding: .5em 0 .25em 0;
 }
 
-/*this is the reset selector*/
-* {
-    padding:0;
-    margin: 0;
+aside h3 {
+    font-size: 105%;
+    padding-bottom: .25em;
 }
-
-p.blockquote{
-    font-style: italic;
+aside img {
+    padding-bottom: 1em;
 }
-
-
 
 /* the styles for the footer */
+footer {
+    background-color: #931420;
+    clear: both;
 
-
+}
+footer p {
+    text-align: center;
+    color: white;
+    padding: 1em 0;
+}
